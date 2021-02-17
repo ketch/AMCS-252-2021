@@ -1,0 +1,26 @@
+\documentclass[12pt,english]{article}
+
+\usepackage{amsmath}
+\begin{document}
+
+\begin{center}
+{\large Homework 2, part 2}
+\par\end{center}{\large \par}
+
+4. Use the code from the notebook presented in class that solves the problem
+
+$$\nabla^2 u = -(20y^3+9\pi^2(y-y^5))\sin(3\pi x)$$  
+
+on the unit square $[0,1]\times[0,1]$ with homogeneous Dirichlet boundary conditions (i.e., $u(x,y)=0$ everywhere on the boundary).
+
+(a) See how large you can take $m$ (the number of grid points in each direction) before the solution of the problem above gets very slow or runs out of memory (this will depend on the computer you're running on). What if you use the non-sparse version of $A$? How large can you take $m$ now before it becomes very slow or runs out of memory? Explain what is happening.  It may be usefull to check the amount of RAM that your computer has.  
+
+(b) Modify the code  to solve the boundary value problem
+$$\nabla^2 u = (2-\pi^2 x^2)\cos(\pi y)$$
+on the unit square $0<x,y<1$, with boundary conditions
+$$u(0,y) = 0 \quad \quad u(1,y) = \cos(\pi y) \quad \quad u(x,0) = x^2 \quad \quad u(x,1)=-x^2.$$
+The easiest way to implement the boundary conditions is by modifying the right hand side vector $F$.
+Check your solution against the true solution $$u(x,y) = x^2 \cos(\pi y).$$  
+What is the rate of convergence?  
+
+\end{document}
